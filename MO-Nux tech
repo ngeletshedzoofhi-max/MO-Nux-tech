@@ -1,0 +1,60 @@
+export default function ManugaTechStore() {
+  const products = [
+    { name: 'C-Type Cable', price: 'R100' },
+    { name: 'iPhone Cable', price: 'R150' },
+    { name: 'Powerbanks', price: 'R180 - R260' },
+    { name: 'LED Lights 5m', price: 'R160' },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-100 p-6 flex items-center justify-center">
+      <div className="max-w-3xl w-full bg-white rounded-3xl shadow-2xl p-8">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-2">MO-nux_tech</h1>
+          <p className="text-gray-600 text-lg">
+            Chargers, Cables, LEDs & Powerbanks Delivered Around Campus
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-4 mb-8">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="border rounded-2xl p-5 shadow-sm hover:shadow-md transition"
+            >
+              <h2 className="text-2xl font-semibold">{product.name}</h2>
+              <p className="text-xl mt-2 text-gray-700">{product.price}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-gray-50 rounded-2xl p-6 mb-6">
+          <h2 className="text-2xl font-bold mb-3">How To Order</h2>
+          <ol className="list-decimal ml-5 space-y-2 text-gray-700">
+            <li>Choose your product</li>
+            <li>Send a WhatsApp message with your order</li>
+            <li>Payment is made on delivery around campus</li>
+            <li>If you are far, online payment is required before delivery</li>
+          </ol>
+        </div>
+
+        <div className="bg-black text-white rounded-2xl p-6 text-center">
+          <h2 className="text-2xl font-bold mb-2">Order on WhatsApp</h2>
+          <p className="mb-4">Fast delivery around campus</p>
+
+          <a
+            href="https://wa.me/27683535711"
+            target="_blank"
+            className="inline-block bg-green-500 hover:bg-green-600 transition text-white px-6 py-3 rounded-2xl text-lg font-semibold"
+          >
+            Message on WhatsApp
+          </a>
+
+          <p className="mt-4 text-sm text-gray-300">
+            WhatsApp: 068 353 5711
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
