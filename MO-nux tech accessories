@@ -1,0 +1,192 @@
+export default function MonuxTechStore() {
+  const products = [
+    {
+      name: 'C-Type Cable',
+      price: 'R100',
+      image:
+        'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      name: 'iPhone Cable',
+      price: 'R150',
+      image:
+        'https://images.unsplash.com/photo-1609592806787-3d9d6dca7b71?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      name: 'Powerbank',
+      price: 'R180 - R260',
+      image:
+        'https://images.unsplash.com/photo-1585338107529-13afc5f02586?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      name: 'LED Lights 5m',
+      price: 'R160',
+      image:
+        'https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?q=80&w=1200&auto=format&fit=crop',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
+      <header className="p-6 border-b border-gray-700">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div>
+            <h1 className="text-4xl font-black tracking-wide">
+              MO-nux_tech
+            </h1>
+            <p className="text-gray-400 mt-1">
+              Tech Accessories Delivered Fast Around Campus
+            </p>
+          </div>
+
+          <a
+            href="https://wa.me/27683535711"
+            target="_blank"
+            className="bg-green-500 hover:bg-green-600 px-5 py-3 rounded-2xl font-semibold transition"
+          >
+            WhatsApp Orders
+          </a>
+        </div>
+      </header>
+
+      <section className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid lg:grid-cols-2 gap-10 items-center mb-16">
+          <div>
+            <h2 className="text-6xl font-black leading-tight mb-6">
+              Premium Accessories.
+              <br />
+              Affordable Prices.
+            </h2>
+
+            <p className="text-gray-300 text-lg mb-8">
+              Buy quality chargers, cables, LEDs and powerbanks with quick
+              student-friendly delivery.
+            </p>
+
+            <div className="flex gap-4 flex-wrap">
+              <a
+                href="#products"
+                className="bg-white text-black px-6 py-3 rounded-2xl font-bold"
+              >
+                Shop Now
+              </a>
+
+              <a
+                href="https://wa.me/27683535711"
+                target="_blank"
+                className="border border-gray-500 px-6 py-3 rounded-2xl"
+              >
+                Contact Seller
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-700">
+            <div className="text-center mb-5">
+              <div className="w-24 h-24 mx-auto rounded-full bg-white text-black flex items-center justify-center text-3xl font-black">
+                MO
+              </div>
+            </div>
+
+            <h3 className="text-3xl font-bold text-center mb-4">
+              Secure Ordering
+            </h3>
+
+            <div className="space-y-3 text-gray-300">
+              <p>✔ Payment on delivery around campus</p>
+              <p>✔ Online payment for distant deliveries</p>
+              <p>✔ Fast WhatsApp support</p>
+              <p>✔ Trusted student seller</p>
+            </div>
+          </div>
+        </div>
+
+        <section id="products">
+          <h2 className="text-4xl font-bold mb-8">Featured Products</h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className="bg-gray-900 rounded-3xl overflow-hidden border border-gray-700 hover:scale-105 transition"
+              >
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="h-56 w-full object-cover"
+                />
+
+                <div className="p-5">
+                  <h3 className="text-2xl font-bold">{product.name}</h3>
+                  <p className="text-xl text-gray-300 mt-2">
+                    {product.price}
+                  </p>
+
+                  <a
+                    href={`https://wa.me/27683535711?text=Hello%20I%20want%20to%20order%20${product.name}`}
+                    target="_blank"
+                    className="block mt-5 bg-green-500 hover:bg-green-600 text-center py-3 rounded-2xl font-semibold"
+                  >
+                    Buy Now
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid lg:grid-cols-2 gap-8 mt-16">
+          <div className="bg-gray-900 rounded-3xl p-8 border border-gray-700">
+            <h2 className="text-3xl font-bold mb-6">
+              Checkout & Payments
+            </h2>
+
+            <div className="space-y-4 text-gray-300">
+              <p>
+                Customers can order directly through WhatsApp and choose:
+              </p>
+
+              <ul className="list-disc ml-6 space-y-2">
+                <li>Cash on delivery around campus</li>
+                <li>EFT payment before delivery</li>
+                <li>Instant transfer with proof of payment</li>
+              </ul>
+
+              <div className="bg-black rounded-2xl p-5 border border-gray-700 mt-5">
+                <h3 className="text-xl font-bold mb-3">
+                  Banking Details
+                </h3>
+
+                <p>Bank: Capitec bank</p>
+                <p>Account Name: MO-nux_tech</p>
+                <p>Account Number: 2090024069</p>
+                <p>Reference: Customer Name</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-900 rounded-3xl p-8 border border-gray-700">
+            <h2 className="text-3xl font-bold mb-6">
+              Contact Information
+            </h2>
+
+            <div className="space-y-4 text-gray-300 text-lg">
+              <p>📞 WhatsApp: 068 353 5711</p>
+              <p>📍 Delivery all around SA</p>
+              <p>🚚 Fast Delivery Available</p>
+              <p>🕒 Orders Open Daily</p>
+            </div>
+
+            <a
+              href="https://wa.me/27683535711"
+              target="_blank"
+              className="mt-8 inline-block bg-green-500 hover:bg-green-600 px-6 py-4 rounded-2xl text-lg font-bold"
+            >
+              Place Your Order
+            </a>
+          </div>
+        </section>
+      </section>
+    </div>
+  );
+}
